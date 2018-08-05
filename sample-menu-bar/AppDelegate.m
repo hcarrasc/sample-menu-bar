@@ -16,7 +16,8 @@
 @implementation AppDelegate
 
 - (void) awakeFromNib {
-    statusItem = [[NSStatusBar systemStatusBar] statusItemWithLength:NSVariableStatusItemLength];
+    statusItem = [[NSStatusBar systemStatusBar]
+                  statusItemWithLength:NSVariableStatusItemLength];
     [statusItem setMenu:menu];
     [statusItem setHighlightMode:YES];
     [statusItem setImage:[NSImage imageNamed:@"chile-flag.png"]];
@@ -24,7 +25,8 @@
 }
 
 - (IBAction)goToStackoverflow:(id)sender {
-    NSURL *url = [ [ NSURL alloc ] initWithString: @"https://stackoverflow.com/users/1768737/hcarrasko" ];
+    NSURL *url = [ [ NSURL alloc ] initWithString:
+                  @"https://stackoverflow.com/users/1768737/hcarrasko"];
     [[NSWorkspace sharedWorkspace] openURL:url];
 }
 
